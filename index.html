@@ -1,0 +1,79 @@
+<doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Administración de Expedientes</title>
+		<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+		<script type="text/javascript" src="Scripts/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="Scripts/AJAX.js"></script>
+
+        <link rel="shortcut icon" href="images/cfe.ico">
+
+		<script type="text/javascript">
+
+		//Estas son las funciones para mandar llamar los archivos que se cargarán cuando se haga click en los botones
+
+  		  $(document).ready(function (){
+
+		//Función que carga automáticamente el archivo Pagina.html el cual tiene una bienvenida
+        $.post("Bienvenida.html","param1=x&param2=y&param3=z", function(DatosEscolares){
+                $("#Pagina").html(DatosEscolares);
+            });
+
+		//Las siguientes funciones cargan archivos en el div Pagina.
+		$("#btnInicio").click(function (){
+            $.post("Bienvenida.html","", function(DatosCuotas){
+                $("#Pagina").html(DatosCuotas);
+            });
+        });
+
+        $("#btnInsertar").click(function (){
+            $.post("InsertarExpediente.php","", function(DatosCuotas){
+                $("#Pagina").html(DatosCuotas);
+            });
+        });
+
+        $("#btnConsultar").click(function (){
+            $.post("BuscadorRPU.php","", function(DatosCuotas){
+                $("#Pagina").html(DatosCuotas);
+            });
+        });
+
+        $("#btnModificar").click(function (){
+            $.post("BuscadorRPUmod.php","", function(DatosCuotas){
+                $("#Pagina").html(DatosCuotas);
+            });
+        });
+        $("#btnReporte").click(function (){
+            $.post("CreaReporte.php","", function(DatosCuotas){
+                $("#Pagina").html(DatosCuotas);
+            });
+        });
+
+    	});
+  		  </script>
+
+  		</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="images/logo.png" alt="Logo CFE"/>
+			</div>
+			<div class="titular">
+				<h1 class="titulo">COMISIÓN FEDERAL DE ELECTRICIDAD</h1>
+				<h1 class="titulo">SISTEMA PARA LA ADMINISTRACIÓN DE EXPEDIENTES</h1>
+			</div>
+		</header>
+		<nav>
+			<ul class="menu">
+				<li><a href="#" id="btnInicio">Inicio</a></li>
+				<li><a href="#" id="btnInsertar">Insertar expediente</a></li>
+				<li><a id="btnConsultar" href="#">Consultar</a></li>
+				<li><a id="btnModificar" href="#">Modificar</a></li>
+				<li><a id="btnReporte" href="#">Crear Reporte</a></li>
+
+			</ul>
+		</nav>
+		<div id="Pagina" class="Pagina"></div>
+	</body>
+</html>

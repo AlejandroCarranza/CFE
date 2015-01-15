@@ -1,0 +1,99 @@
+body{
+	background:#e8e8e8;
+	color:#444;
+	font-family:Calibri;
+	font-size:16px
+}
+header{
+	background:#444;
+	color:#fff;
+	padding:.5em;
+	position:relative;
+	text-align: center;
+}
+header .logo{
+	float:left;
+	width:60px;
+
+}
+header .logo img{
+	width:100px
+
+}
+header .titular{
+	margin:0 80px 0 70px;
+}
+header .titular .filtro{
+	color:#22bce0;
+	font-size:14px;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration:none
+}
+header .titular .publicar{
+	background:#dd4f24;
+	color:#fff;
+	float:right;
+	padding:.2em .5em;
+	text-style:italic;
+	text-decoration:none
+}
+header .titular .titulo{
+	font-size:18px;
+	font-weight:normal;
+	margin:0;
+	padding:0
+}
+nav{
+	background:#14B719;
+	position:relative;
+}
+nav :before{
+	border-bottom:20px solid transparent;
+	border-top:20px solid transparent;
+	content:"";
+	left:0;
+	position:absolute;
+	top:0
+}
+nav .menu{
+	height:40px;
+	line-height:40px;
+	margin:0;
+	overflow-x:auto;
+	padding:0;
+	white-space:nowrap;
+
+}
+nav .menu li{
+	display:inline-block;
+
+}
+nav .menu li a{
+	color:#fff;
+	display:block;
+	margin:0 .5em;
+	padding:0 .2em;
+	text-decoration:none
+}
+nav .menu li a:hover{
+	background:rgba(0,0,0,0.1);
+}
+nav .menu::-webkit-scrollbar{
+	display:none;
+}
+#Pagina{
+    position: absolute;
+    width: 950px;
+    height: 400px;
+    top: 140px;
+    left: 50px;
+  
+}
+#bienvenida {
+	text-align: center;
+}
+.#btnEliminar{
+	left: 100px;
+	top: -55;
+}
